@@ -29,6 +29,98 @@
       "validators": [],
       "help": "This is the instruction text",
       "translatable": true
+    },
+    "content": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the content for the first image",
+      "translatable": true
+    },
+    "_graphic": {
+      "type": "array",
+      "required": true,
+      "title": "First graphic",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "src": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Graphic URL",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": false
+          },
+          "src": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Graphic alt description",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          }
+        }
+      }
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "content": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Step content",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "_graphic": {
+            "type": "array",
+            "required": true,
+            "title": "Step graphic",
+            "items": {
+              "type": "object",
+              "required": true,
+              "properties": {
+                "src": {
+                  "type": "string",
+                  "required": true,
+                  "default": "",
+                  "title": "Graphic URL",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "",
+                  "translatable": false
+                },
+                "src": {
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Graphic alt description",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "",
+                  "translatable": true
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

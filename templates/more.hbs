@@ -1,12 +1,22 @@
 <div class="component__inner more__inner">
   {{> component this}} 
 
-  {{!-- <div class="more__main">
-  {{#each _items}}
+  <div class="more__main">
 
-  {{/each}}
-  </div> 
-  
-  {{#if body}} {{/if}} --}}
+   {{#if _graphic}}<img src="{{_graphic.src}}" class="more__item-bg-graphic" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} />{{/if}} 
+   {{#if content}}<div class="more__item-content">{{{content}}}</div>{{/if}}
+
+    {{#each _items}}
+    <div class="more__widget" data-index="{{@index}}">
+      {{#if _graphic}}<img src="{{_graphic.src}}" class="more__item-graphic" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} />{{/if}}
+      {{#if content}}<div class="more__item-content">{{{content}}}</div>{{/if}}
+    </div>
+    {{/each}}
+    
+    <button class="more__btn btn js-more-click" aria-label="{{{moreText}}}">
+      <div class="icon"></div>
+    </button>
+
+  </div>
 
 </div>
