@@ -18,6 +18,10 @@ define([
 
     postRender: function() {
       this.setReadyStatus();
+
+      if (screen.width <= '520') {
+        this.showMobile();
+      }
     },
 
     checkIfResetOnRevisit: function() {
@@ -40,14 +44,28 @@ define([
         } else {
           this.$('.more__widget').eq(i).removeClass('is-visible');
         }
-        
       });
 
       if(this.moreIndex === this.model.get('_items').length-1) {
         this.setCompletionStatus();
         this.$('.more__btn').addClass('is-hidden');
-        //this.$('.component__instruction').html(Adapt.course.get('_globals').scrollInstruction);
+        this.$('.component__instruction').html(Adapt.course.get('_globals').scrollInstruction);
       }
+    },
+
+    showMobile: function() {
+      this.moreIndex = this.model.get('_items').length-1;
+      this.model.get('_items').forEach((item, i) => {
+        if(this.moreIndex === i) {
+          this.$('.more__widget').eq(i).addClass('is-visible');
+        } else {
+          this.$('.more__widget').eq(i).removeClass('is-visible');
+        }
+      });
+
+      this.setCompletionStatus();
+      this.$('.more__btn').addClass('is-hidden');
+      this.$('.component__instruction').html('');
     }
 
   },
