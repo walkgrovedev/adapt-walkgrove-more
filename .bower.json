@@ -1,13 +1,10 @@
 {
   "name": "adapt-walkgrove-more",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/walkgrovedev/adapt-walkgrove-more.git"
-  },
+  "version": "1.0.0",
   "framework": ">=5",
   "homepage": "https://github.com/walkgrovedev/adapt-walkgrove-more.git",
   "component": "more",
-  "displayName": "More",
+  "displayName": "more",
   "description": "A component ...",
   "main": "/js/adapt-walkgrove-more.js",
   "keywords": [
@@ -15,14 +12,14 @@
     "adapt-component"
   ],
   "license": "GPL-3.0",
-  "_release": "798e51a3a8",
+  "_release": "1.0.0",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "798e51a3a86289604e64b403cc384f87dc685a9d"
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "ee2952fedacf99c49eb56e093bd77647c8b15b99"
   },
   "_source": "git://github.com/walkgrovedev/adapt-walkgrove-more.git",
-  "_target": "*",
+  "_target": "1.0.0",
   "_originalSource": "adapt-walkgrove-more",
   "_direct": true
 }
