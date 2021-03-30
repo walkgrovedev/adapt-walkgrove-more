@@ -1,6 +1,10 @@
 {
   "name": "adapt-walkgrove-more",
-  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/walkgrovedev/adapt-walkgrove-more.git"
+},
+ "version": "1.0.0",
   "framework": ">=5",
   "homepage": "https://github.com/walkgrovedev/adapt-walkgrove-more.git",
   "component": "more",
