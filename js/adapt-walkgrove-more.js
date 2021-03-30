@@ -4,7 +4,7 @@ define([
   'core/js/models/componentModel'
 ], function(Adapt, ComponentView, ComponentModel) {
 
-  var moreView = ComponentView.extend({
+  var MoreView = ComponentView.extend({
 
     events: {
       'click .js-more-click': 'onMore'
@@ -75,6 +75,6 @@ define([
 
   return Adapt.register('more', {
     model: ComponentModel.extend({}),// create a new class in the inheritance chain so it can be extended per component type if necessary later
-    view: moreView
+    view: MoreView
   });
 });
