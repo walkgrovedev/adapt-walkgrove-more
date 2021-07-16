@@ -106,7 +106,7 @@
                   "help": "",
                   "translatable": false
                 },
-                "src": {
+                "alt": {
                   "type": "string",
                   "required": false,
                   "default": "",
