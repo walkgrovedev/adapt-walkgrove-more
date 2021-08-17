@@ -36,6 +36,7 @@ define([
     onMore: function() {
 
       this.$('.more__item-bg-graphic').addClass('is-hidden');
+      this.$('.more__item-content').eq(0).addClass('is-hidden');
       
       this.moreIndex++;
       this.model.get('_items').forEach((item, i) => {
@@ -65,7 +66,7 @@ define([
 
       this.setCompletionStatus();
       this.$('.more__btn').addClass('is-hidden');
-      this.$('.component__instruction').html('');
+      this.$('.component__instruction').html(this.model.get('mobileInstruction'));
     }
 
   },

@@ -1,21 +1,44 @@
 .more {
-    width: 100%;
-    height: auto;
+    // width: 100%;
+    // height: auto;
     
+    &__inner {
+        width:100%;
+        height: auto;
+        position: relative;
+    }
+
     &__main {
-        width: 100%;
+        width:100%;
         height:100%;
         position: relative;
     }
 
     &__widget {
         width: 100%;
-        opacity: 0;
-        top: 0;
-        left:0;
-        position:absolute;
+        height: auto; //100%;
+        // opacity: 0;
+        // top: 0;
+        // left:0;
+        // position:absolute;
+        position: relative;
+
+        display: none;
+
+        @media (max-width: @device-width-small) { 
+            position: relative;
+            //margin-bottom: 1rem;
+
+            display: flex;
+            flex-direction: column;
+            height: auto;
+
+            opacity: 1;
+            display: block;
+        }
 
         &.is-visible {
+            display: block;
             opacity: 1;
             animation-name: fadeIn;
             animation-duration: 1s;
@@ -29,13 +52,30 @@
     &__item-bg-graphic {
         &.is-hidden {
             opacity: 0;
+            display: none;
         }
     }
 
     &__item-content {
         background-color: @item-color;
         color: @item-color-inverted;
-        padding: 1rem 2rem;
+        padding: 0.5rem 2rem;
+
+        border-radius: 1rem;
+
+        &.is-hidden {
+            opacity: 0;
+            display: none;
+        }
+
+        @media (max-width: 823px) { 
+            font-size: 0.9em;
+        }
+
+        @media (max-width: @device-width-small) { 
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+        }
     }
         
     &__btn {
