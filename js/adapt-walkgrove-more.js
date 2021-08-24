@@ -42,8 +42,10 @@ define([
       this.model.get('_items').forEach((item, i) => {
         if(this.moreIndex === i) {
           this.$('.more__widget').eq(i).addClass('is-visible');
+          this.$('.more__item-content').eq(i).removeClass('is-hidden');
         } else {
           this.$('.more__widget').eq(i).removeClass('is-visible');
+          this.$('.more__item-content').eq(i).addClass('is-hidden');
         }
       });
 
